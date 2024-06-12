@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalGPT - 100% Open Source, Free, Local and Private</title>
+    <script src="templates/message.js" defer></script>
 </head>
 <body>
     <main>
-        <ul>
-            <ul>this is a message</ul>
-            <ul>this is a reply</ul>
-            <ul>this is a second message</ul>
-            <ul>this is a very long reply, very very long, loooooooooooooooooooooooong long reply, it should hopefully span multiple lines, let's try our best to make sure it does</ul>
-        </ul>
+        <message-template></message-template>
     </main>
 
+    <template>
+
+    </template>
+
     <form>
-        <input type="text" name="message">
-        <input type="submit">
+        <input type="text" name="message" placeholder="Enter a message">
+        <button>Send</button>
     </form>
 </body>
 </html>

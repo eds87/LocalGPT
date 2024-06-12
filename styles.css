@@ -43,6 +43,7 @@ main {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  padding-left: 0.7rem;
 }
 
 .User {

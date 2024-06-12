@@ -14,8 +14,10 @@
     </main>
 
     <form onsubmit="sendMessage(document.getElementById('messageInput').value); return false;">
-        <input type="text" id="messageInput" name="message" placeholder="Enter a message">
-        <button type="submit">Send</button>
+        <div class="chat-input-container">
+            <input type="text" id="messageInput" name="message" placeholder="Enter a message" class="chat-input">
+            <button type="submit" class="send-button" disabled>Send</button>
+        </div>
     </form>
 
     <script>

@@ -9,16 +9,20 @@
 </head>
 <body>
     <main>
-        <message-template></message-template>
+        <message-template id="messages"></message-template>
     </main>
 
-    <template>
-
-    </template>
-
-    <form>
-        <input type="text" name="message" placeholder="Enter a message">
-        <button>Send</button>
+    <form onsubmit="sendMessage(document.getElementById('messageInput').value); return false;">
+        <input type="text" id="messageInput" name="message" placeholder="Enter a message">
+        <button type="submit">Send</button>
     </form>
+
+    <script>
+        function sendMessage(userMessage) {
+          const messageTemplate = document.getElementById('messages');
+          messageTemplate.addMessage('User', userMessage);
+          document.getElementById('messageInput').value = '';
+        }
+    </script>
 </body>
 </html>

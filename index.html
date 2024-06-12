@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalGPT - 100% Open Source, Free, Local and Private</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="templates/message.js" defer></script>
 </head>
 <body>
@@ -23,6 +24,16 @@
           messageTemplate.addMessage('User', userMessage);
           document.getElementById('messageInput').value = '';
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const messages = document.getElementById('messages');
+          messages.addMessage('User', 'Hello, I am the user');
+          messages.addMessage('LocalGPT', 'Hello, I am the LocalGPT');
+          messages.addMessage('User', 'What is your name?');
+          messages.addMessage('LocalGPT', 'My name is LocalGPT');
+          messages.addMessage('User', 'How old are you?');
+          messages.addMessage('LocalGPT', 'I am 100% open source, free, local and private');
+        });
     </script>
 </body>
 </html>

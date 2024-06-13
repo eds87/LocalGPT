@@ -28,3 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageInput = document.getElementById('messageInput');
     messageInput.addEventListener('input', toggleSendButton);
 });
+
+document.addEventListener('modelProgress', (event) => {
+    const progress = event.detail;
+    document.querySelector('small').innerText = progress.text;
+});

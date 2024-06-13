@@ -19,6 +19,11 @@ main {
   scroll-behavior: smooth;
 }
 
+small {
+  font-size: 10px;
+  color: gray;
+}
+
 .message-container {
   display: flex;
   flex-direction: column;

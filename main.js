@@ -1,3 +1,8 @@
+(async function() {
+    const aimodule = await import('./aimodule.js');
+    console.log('Module loaded:', aimodule);
+})();
+
 function sendMessage(userMessage) {
     const messageTemplate = document.getElementById('messages');
     messageTemplate.addMessage('User', userMessage);

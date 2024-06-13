@@ -30,6 +30,8 @@ class MessageTemplate extends HTMLElement {
       templateContent.querySelector('.sender').textContent = sender;
       templateContent.querySelector('.messageText').textContent = message;
       this.shadowRoot.appendChild(templateContent);
+      const main = document.querySelector('main');
+      main.scrollTop = main.scrollHeight;
     }
   }
   

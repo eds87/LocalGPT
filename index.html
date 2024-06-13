@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalGPT - 100% Open Source, Free, Local and Private</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="templates/message.js" defer></script>
+    <script src="templates/message.js" type="module"></script>
+    <script src="main.js"></script>
 </head>
 <body>
     <main>
@@ -19,33 +20,5 @@
             <button type="submit" class="send-button" disabled>Send</button>
         </div>
     </form>
-
-    <script>
-        function sendMessage(userMessage) {
-          const messageTemplate = document.getElementById('messages');
-          messageTemplate.addMessage('User', userMessage);
-          document.getElementById('messageInput').value = '';
-          document.querySelector('.send-button').disabled = true;
-        }
-
-        function toggleSendButton() {
-          const messageInput = document.getElementById('messageInput');
-          const sendButton = document.querySelector('.send-button');
-          sendButton.disabled = messageInput.value.trim() === '';
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-          const messages = document.getElementById('messages');
-          messages.addMessage('User', 'Hello, I am the user');
-          messages.addMessage('LocalGPT', 'Hello, I am the LocalGPT');
-          messages.addMessage('User', 'What is your name?');
-          messages.addMessage('LocalGPT', 'My name is LocalGPT');
-          messages.addMessage('User', 'How old are you?');
-          messages.addMessage('LocalGPT', 'I am 100% open source, free, local and private');
-
-          const messageInput = document.getElementById('messageInput');
-          messageInput.addEventListener('input', toggleSendButton);
-        });
-    </script>
 </body>
 </html>
